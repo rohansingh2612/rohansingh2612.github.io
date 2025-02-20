@@ -3,50 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Rohan Singh - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Your Name</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Write a brief introduction about yourself here.</p>
-    </section>
+    <div id="app" class="min-h-screen">
+        <header class="fixed top-0 left-0 right-0 bg-white dark:bg-gray-800 shadow-md transition-colors duration-300 z-50">
+            <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+                <h1 class="text-2xl font-bold text-gray-800 dark:text-white">Portfolio</h1>
+                <nav class="hidden md:flex space-x-4">
+                    <a href="#home" class="text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white transition-colors duration-300">Home</a>
+                    <a href="#about" class="text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white transition-colors duration-300">About Me</a>
+                    <a href="#skills" class="text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white transition-colors duration-300">Skills</a>
+                    <a href="#projects" class="text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white transition-colors duration-300">Projects</a>
+                    <a href="#contact" class="text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white transition-colors duration-300">Contact</a>
+                </nav>
+                <button id="themeToggle" class="p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white transition-colors duration-300" aria-label="Toggle theme">
+                    <i data-lucide="sun" class="w-6 h-6"></i>
+                    <i data-lucide="moon" class="w-6 h-6 hidden"></i>
+                </button>
+            </div>
+        </header>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>Project Title</h3>
-            <p>Project description goes here.</p>
+        <main class="pt-16">
+            <section id="home" class="min-h-screen flex items-center justify-center bg-gray-100 dark:bg-gray-900 transition-colors duration-300">
+                <div class="text-center">
+                    <h2 class="text-4xl font-bold mb-4 text-gray-800 dark:text-white transition-colors duration-300">Hey! I'm</h2>
+                    <h2 id="typingTitle" class="text-4xl font-bold mb-4 text-blue-600 dark:text-blue-400 transition-colors duration-300"></h2>
+                    <p class="text-xl mb-8 text-gray-600 dark:text-gray-300 transition-colors duration-300">B.Tech CSE Student</p>
+                    <div class="flex justify-center space-x-4">
+                        <a href="https://github.com/rohansingh2612" target="_blank" rel="noopener noreferrer" class="text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white transition-colors duration-300">
+                            <i data-lucide="github" class="w-6 h-6"></i>
+                        </a>
+                        <a href="https://x.com/rohansingh2612" target="_blank" rel="noopener noreferrer" class="text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white transition-colors duration-300">
+                            <i data-lucide="twitter" class="w-6 h-6"></i>
+                        </a>
+                        <a href="https://www.instagram.com/rohan.singh2612" target="_blank" rel="noopener noreferrer" class="text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white transition-colors duration-300">
+                            <i data-lucide="instagram" class="w-6 h-6"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/rohansingh2612" target="_blank" rel="noopener noreferrer" class="text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white transition-colors duration-300">
+                            <i data-lucide="linkedin" class="w-6 h-6"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@rohan.singh2612" target="_blank" rel="noopener noreferrer" class="text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white transition-colors duration-300">
+                            <i data-lucide="youtube" class="w-6 h-6"></i>
+                        </a>
+                    </div>
+                    <a href="#about" class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-gray-600 dark:text-gray-300 animate-bounce transition-colors duration-300">
+                        <i data-lucide="chevron-down" class="w-8 h-8"></i>
+                    </a>
+                </div>
+            </section>
+
+            <section id="about" class="py-16 bg-white dark:bg-gray-800 transition-colors duration-300">
+                <div class="container mx-auto px-4">
+                    <h2 class="text-3xl font-bold mb-8 text-center text-gray-800 dark:text-white transition-colors duration-300">About Me</h2>
+                    <div class="flex flex-col md:flex-row items-center justify-center">
+                        <img src="https://blogger.googleusercontent.com/img/a/AVvXsEhooyW3CSaEMM-ELzOMiIwolKSA6pEzzf1GqXnijFmzKBJ4l6H_hXNHnXqn7-j-Aa32gCeOaGXlU4v43sEO34mifwztZYNmsoLhXxTQOUYD6FH0BynRq8u8BhzsQtGepTT1peZz0mVr2Fe-KXpIqtXMajbJZyR-IAf20NXCjm7OCk9lP0f4oasrMzI5a8_C" alt="Rohan Singh" class="w-64 h-64 rounded-full mb-8 md:mb-0 md:mr-8 shadow-lg">
+                        <div class="max-w-2xl">
+                            <p class="text-gray-600 dark:text-gray-300 mb-4 transition-colors duration-300">
+                                Hello! I'm Rohan Singh, a first-year student at Dronacharya College of Engineering, pursuing a B.Tech degree in Computer Science Engineering with a specialization in Artificial Intelligence and Machine Learning.
+                            </p>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4 transition-colors duration-300">
+                                I'm passionate about web development, UI/UX design, and software engineering. My goal is to create innovative solutions that make a positive impact on people's lives.
+                            </p>
+                            <ul class="list-disc list-inside text-gray-600 dark:text-gray-300 transition-colors duration-300">
+                                <li><strong>Age:</strong> 18</li>
+                                <li><strong>Email:</strong> <a href="mailto:rohansingh2612@gmail.com" class="text-blue-600 dark:text-blue-400 hover:underline transition-colors duration-300">rohansingh2612@gmail.com</a></li>
+                                <li><strong>Phone:</strong> <a href="tel:+919289449016" class="text-blue-600 dark:text-blue-400 hover:underline transition-colors duration-300">+91 9289449016</a></li>
+                                <li><strong>Education:</strong> Pursuing a B.Tech degree in CSE specialization in AI & ML at Dronacharya College of Engineering</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="skills" class="py-16 bg-gray-100 dark:bg-gray-900 transition-colors duration-300">
+                <div class="container mx-auto px-4">
+                    <h2 class="text-3xl font-bold mb-8 text-center text-gray-800 dark:text-white transition-colors duration-300">Skills</h2>
+                    <div class="relative">
+                        <div id="skillsContainer" class="flex overflow-x-hidden">
+                            <!-- Skills will be dynamically inserted here -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="projects" class="py-16 bg-white dark:bg-gray-800 transition-colors duration-300">
+                <div class="container mx-auto px-4">
+                    <h2 class="text-3xl font-bold mb-8 text-center text-gray-800 dark:text-white transition-colors duration-300">Project Showcase</h2>
+                    <div class="relative">
+                        <div id="projectsContainer" class="flex overflow-x-hidden">
+                            <!-- Projects will be dynamically inserted here -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact" class="py-16 bg-gray-100 dark:bg-gray-900 transition-colors duration-300">
+                <div class="container mx-auto px-4">
+                    <h2 class="text-3xl font-bold mb-8 text-center text-gray-800 dark:text-white transition-colors duration-300">Get in Touch</h2>
+                    <form id="contactForm" class="max-w-lg mx-auto">
+                        <div class="mb-4">
+                            <label for="name" class="block text-gray-700 dark:text-gray-300 font-bold mb-2 transition-colors duration-300">Name</label>
+                            <input type="text" id="name" name="name" required class="w-full px-3 py-2 text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-800 rounded-lg border border-gray-300 dark:border-gray-600 focus:outline-none focus:border-blue-500 transition-colors duration-300">
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-gray-700 dark:text-gray-300 font-bold mb-2 transition-colors duration-300">Email</label>
+                            <input type="email" id="email" name="email" required class="w-full px-3 py-2 text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-800 rounded-lg border border-gray-300 dark:border-gray-600 focus:outline-none focus:border-blue-500 transition-colors duration-300">
+                        </div>
+                        <div class="mb-4">
+                            <label for="message" class="block text-gray-700 dark:text-gray-300 font-bold mb-2 transition-colors duration-300">Message</label>
+                            <textarea id="message" name="message" rows="4" required class="w-full px-3 py-2 text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-800 rounded-lg border border-gray-300 dark:border-gray-600 focus:outline-none focus:border-blue-500 transition-colors duration-300"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg focus:outline-none focus:shadow-outline transition-colors duration-300">Send Message</button>
+                    </form>                    
+                </div>
+            </section>
+        </main>
+
+        <!-- Popup Message -->
+        <div id="statusPopup" class="hidden fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center z-50">
+            <div id="popupContent" class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg w-full max-w-lg flex items-center space-x-3 transition-colors duration-300">
+                <!-- Status Icon -->
+                <div id="popupIcon" class="text-2xl"></div>
+                <div id="popupText" class="text-lg font-semibold flex-1 text-gray-800 dark:text-white transition-colors duration-300"></div>
+                <!-- Close Button -->
+                <button id="popupCloseButton" class="ml-4 text-lg text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors duration-300">&times;</button>
+            </div>
         </div>
-        
-    </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
-    </section>
 
-    <footer>
-        <p>&copy; 2023 Your Name. All rights reserved.</p>
-    </footer>
+    </div>
+
+    <script src="script.js" defer></script>
 </body>
 </html>

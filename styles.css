@@ -1,0 +1,244 @@
+@import url('https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css');
+
+.pt-16{
+    padding-top: 0;
+}
+
+.py-16{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.text-xl{
+    text-align: center;
+}
+
+/* Global dark theme settings */
+.dark {
+    color-scheme: dark;
+}
+
+.dark body {
+    background-color: #1a202c; /* Dark gray background */
+    color: #f7fafc; /* Light text color */
+}
+
+/* Specific elements styling for dark mode */
+.dark .bg-gray-100 {
+    background-color: #2d3748; /* Slightly darker gray */
+}
+
+.dark .text-gray-800 {
+    color: #f7fafc; /* Light text color for readability */
+}
+
+.dark .text-gray-600 {
+    color: #cbd5e0; /* Softer gray for secondary text */
+}
+
+.dark .text-blue-600 {
+    color: #63b3ed; /* Softer blue for links */
+}
+
+.dark .text-gray-300 {
+    color: #e2e8f0; /* Light gray text */
+}
+
+.dark .text-gray-900 {
+    color: #ffffff; /* White text */
+}
+
+/* Header and navigation bar */
+.dark .dark\:bg-gray-800 {
+    background-color: #2d3748; /* Dark header background */
+}
+
+.dark .dark\:text-gray-300 {
+    color: #e2e8f0; /* Light gray for navigation text */
+}
+
+.dark .dark\:text-white {
+    color: #ffffff; /* Pure white for highlights */
+}
+
+/* Buttons and toggles */
+.dark .dark\:bg-gray-700 {
+    background-color: #4a5568; /* Button background */
+}
+
+.dark .dark\:text-white {
+    color: #ffffff; /* Text inside buttons */
+}
+
+.dark .hover\:text-gray-800:hover {
+    color: #f7fafc; /* Ensure hover text color stays light */
+}
+
+/* Cards and containers */
+.dark .bg-gray-200 {
+    background-color: #4a5568; /* Darkened container background */
+}
+
+.dark .dark\:bg-gray-700 {
+    background-color: #4a5568; /* Matching container background */
+}
+
+.dark .dark\:bg-gray-900 {
+    background-color: #1a202c; /* Very dark background */
+}
+
+.dark .dark\:border-gray-600 {
+    border-color: #718096; /* Soft border color for contrast */
+}
+
+/* Inputs and forms */
+.dark input,
+.dark textarea {
+    background-color: #2d3748; /* Input background */
+    color: #f7fafc; /* Input text color */
+    border-color: #4a5568; /* Input border color */
+}
+
+.dark input:focus,
+.dark textarea:focus {
+    border-color: #63b3ed; /* Focus border color (blue) */
+    outline: none;
+}
+
+/* Footer */
+.dark footer {
+    background-color: #2d3748; /* Footer background */
+    color: #e2e8f0; /* Light text color */
+}
+
+.animate-bounce {
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(-25%);
+        animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+    50% {
+        transform: translateY(0);
+        animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+}
+
+#skillsContainer > .w-full,
+#projectsContainer > .w-full {
+    text-align: center;
+}
+
+#skillsContainer > .w-full{
+    width: 50%;
+}
+
+@media (max-width: 768px) {
+    #skillsContainer {
+        width: 100%;
+        align-items: center;
+    }
+}
+
+/* Ensure that the popup is hidden initially */
+#statusPopup {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+/* Show popup with fade-in effect */
+#statusPopup.show {
+    display: flex;
+    opacity: 1;
+}
+
+/* Close button styles */
+#popupCloseButton {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Popup content styling */
+#popupContent {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 90%;
+    max-height: 80%;
+    text-align: center;
+}
+
+#popupIcon {
+    margin-right: 10px;
+}
+
+/* Success and Error styles */
+.bg-green-500 { background-color: #38a169; }
+.bg-red-500 { background-color: #e53e3e; }
+
+/* Smooth scrolling for all elements */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Improved transitions */
+.transition-colors {
+    transition-property: background-color, border-color, color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+}
+
+/* Hover effects for buttons and links */
+a:hover, button:hover {
+    opacity: 0.8;
+}
+
+/* Improved form styling */
+input:focus, textarea:focus {
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+}
+
+/* Responsive font sizes */
+@media (max-width: 640px) {
+    h1 { font-size: 1.5rem; }
+    h2 { font-size: 1.25rem; }
+    p { font-size: 0.875rem; }
+}
+
+/* Improved accessibility */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
